@@ -33,7 +33,7 @@ public class AuthController {
 			return ResponseEntity.ok().body(tokenService.generateToken(authentication)); 
 		} catch (Exception e) {
 		    return ResponseEntity
-		    		.status(HttpStatus.INTERNAL_SERVER_ERROR)
+		    		.status(HttpStatus.UNAUTHORIZED)
 		    		.body(e.getMessage());
 		}
 	}
